@@ -34,7 +34,7 @@ def main():
     st.title("FLUX Prediction")
     html_temp = """
     <div style="background-color:tomato;padding:10px">
-    <h2 style="color:white;text-align:center;">Streamlit FLUX Prediction ANN  </h2>
+    <h2 style="color:white;text-align:center;">Streamlit FLUX Predictior ANN App  </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
