@@ -47,7 +47,7 @@ def main():
 
     X = np.array([FT,FFR,CFR,N,W,L])
     ann = ["Perceptron", "Multilayer Perceptron"]
-    opt = st.radio('Select type of ANN',ann)
+    opt = st.radio('Select Type Of ANN : ',ann)
 
     result=""
 
