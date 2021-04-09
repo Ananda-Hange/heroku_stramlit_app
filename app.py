@@ -39,12 +39,12 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    FT = st.number_input("FT :")
-    FFR = st.number_input("FFR :")
-    CFR = st.number_input("CFR :")
-    N = st.number_input("N :")
-    W = st.number_input("W :")
-    L = st.number_input("L :")
+    FT = st.number_input("FT (0-150) :")
+    FFR = st.number_input("FFR (0-5) :")
+    CFR = st.number_input("CFR (0-5) :")
+    N = st.number_input("N (0-100) :")
+    W = st.number_input("W (0-10) :")
+    L = st.number_input("L (0-600) :")
 
     X = np.array([FT,FFR,CFR,N,W,L])
     ann = ["Perceptron", "Multilayered Perceptron (Single Hidden Layer)"]
