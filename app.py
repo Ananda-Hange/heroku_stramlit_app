@@ -2,9 +2,9 @@
 import numpy as np
 import streamlit as st
 
-W1 = np.load('/content/W1_momt.npy')
-W2 = np.load('/content/W2_momt.npy')
-W3 =  np.load('/content/W_momt.npy')
+W1 = np.load('W1_momt.npy')
+W2 = np.load('W2_momt.npy')
+W3 =  np.load('W_momt.npy')
 
 
 
