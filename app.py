@@ -39,11 +39,11 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    FT = st.number_input("FT (0-150) :")
-    FFR = st.number_input("FFR (0-5) :")
-    CFR = st.number_input("CFR (0-5) :")
-    N = st.number_input("N (0-100) :")
-    W = st.number_input("W (0-10) :")
+    FT = st.number_input("FT (30-150) :")
+    FFR = st.number_input("FFR (1-5) :")
+    CFR = st.number_input("CFR (1-5) :")
+    N = st.number_input("N (1-100) :")
+    W = st.number_input("W (1-10) :")
     L = st.number_input("L (0-600) :")
 
     X = np.array([FT,FFR,CFR,N,W,L])
@@ -58,7 +58,7 @@ def main():
         #print(result)
       st.success('The FLUX is : {}'.format(result))
 
-    if opt == 'Multilayer Perceptron':
+    if opt == 'Multilayered Perceptron (Single Hidden Layer)':
       if st.button("Predict"):
         result = predict_flux(X,W1,W2)
       st.success('The FLUX is : {}'.format(result))
