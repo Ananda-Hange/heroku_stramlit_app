@@ -47,7 +47,7 @@ def main():
     L = st.number_input("L :")
 
     X = np.array([FT,FFR,CFR,N,W,L])
-    ann = ["Perceptron", "Multilayer Perceptron (Single Hidden Layer)"]
+    ann = ["Perceptron", "Multilayered Perceptron (Single Hidden Layer)"]
     opt = st.radio('Select Type Of ANN : ',ann)
 
     result=""
