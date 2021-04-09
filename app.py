@@ -31,6 +31,7 @@ def perceptron_predict_flux(X,W):
     return np.exp(y_hat[0])
 
 def main():
+    st.text('Author : Ananda Hange')
     st.title("FLUX Prediction")
     html_temp = """
     <div style="background-color:tomato;padding:10px">
