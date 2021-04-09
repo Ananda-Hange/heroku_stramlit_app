@@ -4,7 +4,7 @@ import streamlit as st
 
 W1 = np.load('W1_momt.npy')
 W2 = np.load('W2_momt.npy')
-W3 =  np.load('W_momt(1).npy')
+W3 =  np.load('W_momt.npy')
 
 
 
