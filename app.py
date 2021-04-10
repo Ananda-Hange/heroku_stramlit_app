@@ -14,7 +14,7 @@ def sigmoid(z):
 
     return (1/(1+np.exp(-z)))
 
-def predict_flux(X,W1,W2):
+def predict_target(X,W1,W2):
     X1= np.log(X)
     z11,z12,z13 = np.dot(np.transpose(W1),X1.reshape(-1,1))
     o11 = sigmoid(z11)
@@ -25,7 +25,7 @@ def predict_flux(X,W1,W2):
     return np.exp(y_hat[0])
 
 
-def perceptron_predict_flux(X,W):
+def perceptron_predict_target(X,W):
     X1 = np.log(X)
     y_hat = np.dot(np.transpose(W),X1.reshape(-1,1))
     return np.exp(y_hat[0])
@@ -39,14 +39,14 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    FT = st.number_input("FT (30-150) :")
-    FFR = st.number_input("FFR (1-5) :")
-    CFR = st.number_input("CFR (1-5) :")
-    N = st.number_input("N (1-100) :")
-    W = st.number_input("W (1-10) :")
-    L = st.number_input("L (0-600) :")
+    X1 = st.number_input("X1 (30-150) :")
+    X2 = st.number_input("X2 (1-5) :")
+    X3 = st.number_input("X3 (1-5) :")
+    X4 = st.number_input("X4 (1-100) :")
+    X5 = st.number_input("X5 (1-10) :")
+    X6 = st.number_input("X6 (0-600) :")
 
-    X = np.array([FT,FFR,CFR,N,W,L])
+    X = np.array([X1,X2,X3,X4,X5,X6])
     ann = ["Perceptron", "Multilayered Perceptron (Single Hidden Layer)"]
     opt = st.radio('Select Type Of ANN : ',ann)
 
@@ -54,14 +54,14 @@ def main():
 
     if opt == 'Perceptron':
       if st.button("Predict"):
-        result = perceptron_predict_flux(X,W3)
+        result = perceptron_predict_target(X,W3)
         #print(result)
-      st.success('The FLUX is : {}'.format(result))
+      st.success('The Target is : {}'.format(result))
 
     if opt == 'Multilayered Perceptron (Single Hidden Layer)':
       if st.button("Predict"):
-        result = predict_flux(X,W1,W2)
-      st.success('The FLUX is : {}'.format(result))
+        result = predict_target(X,W1,W2)
+      st.success('The Target is : {}'.format(result))
     
 
 
