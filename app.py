@@ -40,11 +40,23 @@ def main():
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     X1 = st.number_input("X1 (30-150) :")
+    if X1>150 or X1<30 :
+      st.error('Please enter valid input between 30-150')
     X2 = st.number_input("X2 (1-5) :")
+    if X2>5 or X1<1:
+      st.error('Please enter valid input between 1-5')
     X3 = st.number_input("X3 (1-5) :")
+    if X3>5 or X3<1 :
+      st.error('Please enter valid input between 1-5')
     X4 = st.number_input("X4 (1-100) :")
+    if X4>100 or X1<1 :
+      st.error('Please enter valid input between 1-100')
     X5 = st.number_input("X5 (1-10) :")
+    if X5>10 or X5<1 :
+      st.error('Please enter valid input between 1-10')
     X6 = st.number_input("X6 (0-600) :")
+    if X6>600 or X6<0 :
+      st.error('Please enter valid input between 0-600')
 
     X = np.array([X1,X2,X3,X4,X5,X6])
     ann = ["Perceptron", "Multilayered Perceptron (Single Hidden Layer)"]
